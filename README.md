@@ -2,6 +2,8 @@
 
 A comprehensive web component design system built with **Lit.js**, **Vanilla JS**, **Modern CSS3**, and documented with **Storybook 10**.
 
+**Created by [Rebecca Frances Cansinos](https://github.com/squidjam)**
+
 ## Covered HTML Elements
 
 This design system provides web component wrappers and styled variants for **150+ HTML elements**:

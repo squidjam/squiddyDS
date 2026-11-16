@@ -365,7 +365,7 @@
     "squiddy",
     "storybook"
   ],
-  "author": "Squiddy",
+  "author": "Rebecca Frances Cansinos",
   "license": "MIT",
   "dependencies": {
     "lit": "^3.3.3"

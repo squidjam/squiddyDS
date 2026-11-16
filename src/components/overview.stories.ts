@@ -8,7 +8,7 @@ const meta: Meta = {
   parameters: {
     docs: {
       description: {
-        component: 'Squiddy Design System — A comprehensive web component library covering 150+ HTML elements.',
+        component: 'Squiddy Design System — A comprehensive web component library covering 150+ HTML elements. Created by Rebecca Frances Cansinos.',
       },
     },
   },
@@ -146,7 +146,7 @@ export const AllComponents: Story = {
 
       <sq-footer>
         <sq-text variant="small" align="center">
-          Squiddy Design System &copy; 2026 — Built with Lit.js &amp; Web Components
+          Squiddy Design System &copy; 2026 Rebecca Frances Cansinos — Built with Lit.js &amp; Web Components
         </sq-text>
       </sq-footer>
     </sq-container>
