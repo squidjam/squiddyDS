@@ -1,0 +1,232 @@
+/* ==========================================================================
+   Squiddy Design System — Design Tokens
+   ==========================================================================
+   These CSS custom properties define the visual language for all components.
+   Use `sq-mode="dark"` on any container (e.g. <html>) to switch to dark mode.
+   Auto-detects system preference via prefers-color-scheme when no explicit theme is set.
+   ========================================================================== */
+
+/* ---- Light Theme (default) — from skill.md ---- */
+:root,
+html[sq-mode="light"],
+:host {
+  /* ---- Backgrounds ---- */
+  --sq-bg-default: #FCF7ED;
+  --sq-bg-surface: #FFFDF8;
+  --sq-bg-elevated: #FFFFFF;
+  --sq-bg-inverse: #370130;
+  --sq-bg-overlay: rgba(55, 1, 48, 0.4);
+  --sq-bg-subtle: #e5e7eb;
+  --sq-bg-header: #f3f4f6;
+
+  /* ---- Foreground / Text ---- */
+  --sq-fg-default: #370130;
+  --sq-fg-muted: #BB5DAF;
+  --sq-fg-inverse: #FFFDF8;
+  --sq-fg-link: #AF019A;
+  --sq-fg-link-hover: #FE00F0;
+
+  /* ---- Borders ---- */
+  --sq-border-default: #AF019A;
+  --sq-border-subtle: rgba(175, 1, 154, 0.2);
+  --sq-border-focus: #FE00F0;
+
+  /* ---- Accent Colors ---- */
+  --sq-accent-primary: #FE00F0;
+  --sq-accent-primary-hover: #E300C9;
+  --sq-accent-primary-active: #C700AD;
+  --sq-accent-primary-light: rgba(254, 0, 240, 0.1);
+  --sq-accent-primary-light-hover: rgba(254, 0, 240, 0.18);
+
+  /* ---- Semantic Colors ---- */
+  --sq-color-success: #16a34a;
+  --sq-color-success-light: rgba(22, 163, 74, 0.1);
+  --sq-color-warning: #d97706;
+  --sq-color-warning-light: rgba(217, 119, 6, 0.1);
+  --sq-color-danger: #B42318;
+  --sq-color-danger-light: rgba(180, 35, 24, 0.1);
+  --sq-color-info: #2563eb;
+  --sq-color-info-light: rgba(37, 99, 235, 0.1);
+
+  /* ---- Typography Scale ---- */
+  --sq-text-xs: 0.75rem;      /* 12px */
+  --sq-text-sm: 0.875rem;     /* 14px */
+  --sq-text-md: 1rem;         /* 16px */
+  --sq-text-lg: 1.125rem;     /* 18px */
+  --sq-text-xl: 1.25rem;      /* 20px */
+  --sq-text-2xl: 1.5rem;      /* 24px */
+  --sq-text-3xl: 1.875rem;    /* 30px */
+  --sq-text-4xl: 2.25rem;     /* 36px */
+
+  --sq-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --sq-font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sq-line-height-tight: 1.25;
+  --sq-line-height-normal: 1.5;
+  --sq-line-height-relaxed: 1.75;
+  --sq-font-weight-normal: 400;
+  --sq-font-weight-medium: 500;
+  --sq-font-weight-semibold: 600;
+  --sq-font-weight-bold: 700;
+
+  /* ---- Spacing Scale ---- */
+  --sq-space-1: 4px;
+  --sq-space-2: 8px;
+  --sq-space-3: 12px;
+  --sq-space-4: 16px;
+  --sq-space-5: 20px;
+  --sq-space-6: 24px;
+  --sq-space-8: 32px;
+  --sq-space-10: 40px;
+  --sq-space-12: 48px;
+  --sq-space-16: 64px;
+
+  /* ---- Radius ---- */
+  --sq-radius-none: 0px;
+  --sq-radius-sm: 4px;
+  --sq-radius-md: 8px;
+  --sq-radius-lg: 12px;
+  --sq-radius-xl: 16px;
+  --sq-radius-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --sq-shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+  --sq-shadow-md: 0px 8px 20px 0px rgba(0, 0, 0, 0.1);
+  --sq-shadow-lg: 0px 16px 40px 0px rgba(0, 0, 0, 0.12);
+
+  /* ---- Motion ---- */
+  --sq-motion-fast: 120ms ease-out;
+  --sq-motion-base: 200ms ease;
+  --sq-motion-slow: 350ms ease;
+
+  /* ---- Z-index Scale ---- */
+  --sq-z-dropdown: 100;
+  --sq-z-sticky: 200;
+  --sq-z-overlay: 300;
+  --sq-z-modal: 400;
+  --sq-z-tooltip: 500;
+
+  /* ---- Transitions ---- */
+  --sq-transition-color: color var(--sq-motion-fast), background-color var(--sq-motion-fast), border-color var(--sq-motion-fast);
+  --sq-transition-transform: transform var(--sq-motion-base);
+  --sq-transition-opacity: opacity var(--sq-motion-base);
+}
+
+/* ---- Dark Theme — purple/magenta palette from design reference ---- */
+[sq-mode="dark"],
+html[sq-mode="dark"],
+:host([sq-mode="dark"]) {
+  /* ---- Backgrounds ---- */
+  --sq-bg-default: #1A0F23;
+  --sq-bg-surface: #2D1B36;
+  --sq-bg-elevated: #3D2847;
+  --sq-bg-inverse: #F0ABFC;
+  --sq-bg-overlay: rgba(26, 15, 35, 0.7);
+  --sq-bg-subtle: #3D2847;
+  --sq-bg-header: #2D1B36;
+
+  /* ---- Foreground / Text ---- */
+  --sq-fg-default: #F0ABFC;
+  --sq-fg-muted: #BB5DAF;
+  --sq-fg-inverse: #1A0F23;
+  --sq-fg-link: #F0ABFC;
+  --sq-fg-link-hover: #D946EF;
+
+  /* ---- Borders ---- */
+  --sq-border-default: rgba(217, 70, 239, 0.3);
+  --sq-border-subtle: rgba(217, 70, 239, 0.12);
+  --sq-border-focus: #D946EF;
+
+  /* ---- Accent Colors ---- */
+  --sq-accent-primary: #D946EF;
+  --sq-accent-primary-hover: #C026D6;
+  --sq-accent-primary-active: #A81BD9;
+  --sq-accent-primary-light: rgba(217, 70, 239, 0.15);
+  --sq-accent-primary-light-hover: rgba(217, 70, 239, 0.25);
+
+  /* ---- Semantic Colors ---- */
+  --sq-color-success: #4ade80;
+  --sq-color-success-light: rgba(74, 222, 128, 0.15);
+  --sq-color-warning: #fbbf24;
+  --sq-color-warning-light: rgba(251, 191, 36, 0.15);
+  --sq-color-danger: #f87171;
+  --sq-color-danger-light: rgba(248, 113, 113, 0.15);
+  --sq-color-info: #c084fc;
+  --sq-color-info-light: rgba(192, 132, 252, 0.15);
+
+  /* ---- Shadows (darker for dark mode) ---- */
+  --sq-shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  --sq-shadow-md: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+  --sq-shadow-lg: 0px 16px 40px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- Auto-detect system dark mode preference ---- */
+@media (prefers-color-scheme: dark) {
+  :root:not([sq-mode]),
+  html:not([sq-mode]),
+  :host(:not([sq-mode])) {
+    /* Apply dark theme tokens when no explicit sq-mode is set and system prefers dark */
+    --sq-bg-default: #1A0F23;
+    --sq-bg-surface: #2D1B36;
+    --sq-bg-elevated: #3D2847;
+    --sq-bg-inverse: #F0ABFC;
+    --sq-bg-overlay: rgba(26, 15, 35, 0.7);
+    --sq-bg-subtle: #3D2847;
+    --sq-bg-header: #2D1B36;
+    --sq-fg-default: #F0ABFC;
+    --sq-fg-muted: #BB5DAF;
+    --sq-fg-inverse: #1A0F23;
+    --sq-fg-link: #F0ABFC;
+    --sq-fg-link-hover: #D946EF;
+    --sq-border-default: rgba(217, 70, 239, 0.3);
+    --sq-border-subtle: rgba(217, 70, 239, 0.12);
+    --sq-border-focus: #D946EF;
+    --sq-accent-primary: #D946EF;
+    --sq-accent-primary-hover: #C026D6;
+    --sq-accent-primary-active: #A81BD9;
+    --sq-accent-primary-light: rgba(217, 70, 239, 0.15);
+    --sq-accent-primary-light-hover: rgba(217, 70, 239, 0.25);
+    --sq-color-success: #4ade80;
+    --sq-color-success-light: rgba(74, 222, 128, 0.15);
+    --sq-color-warning: #fbbf24;
+    --sq-color-warning-light: rgba(251, 191, 36, 0.15);
+    --sq-color-danger: #f87171;
+    --sq-color-danger-light: rgba(248, 113, 113, 0.15);
+    --sq-color-info: #c084fc;
+    --sq-color-info-light: rgba(192, 132, 252, 0.15);
+    --sq-shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+    --sq-shadow-md: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    --sq-shadow-lg: 0px 16px 40px 0px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* ---- Global Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sq-font-family);
+  font-size: var(--sq-text-md);
+  line-height: var(--sq-line-height-normal);
+  color: var(--sq-fg-default);
+  background-color: var(--sq-bg-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Focus Visible ---- */
+:focus-visible {
+  outline: 2px solid var(--sq-border-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Selection ---- */
+::selection {
+  background: var(--sq-accent-primary-light);
+  color: var(--sq-fg-default);
+}

@@ -1,0 +1,9 @@
+{
+  "plugins": ["squiddyds"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "squiddyds/no-unknown-component": "error",
+    "squiddyds/no-invalid-attribute-values": "error",
+    "squiddyds/no-unknown-attributes": "warn"
+  }
+}

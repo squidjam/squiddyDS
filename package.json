@@ -1,0 +1,387 @@
+{
+  "name": "squiddyds",
+  "version": "1.0.0",
+  "description": "Squiddy Design System — Web Components for modern web applications",
+  "main": "dist/squiddy-ds.js",
+  "module": "dist/squiddy-ds.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "sideEffects": [
+    "dist/squiddy-ds.js",
+    "src/tokens/tokens.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/squiddy-ds.js"
+    },
+    "./tokens.css": "./src/tokens/tokens.css",
+    "./base-component": {
+      "types": "./dist/components/base-component.d.ts",
+      "import": "./dist/base-component.js"
+    },
+    "./interactive/sq-button": {
+      "types": "./dist/components/interactive/sq-button.d.ts",
+      "import": "./dist/interactive/sq-button.js"
+    },
+    "./interactive/sq-dialog": {
+      "types": "./dist/components/interactive/sq-dialog.d.ts",
+      "import": "./dist/interactive/sq-dialog.js"
+    },
+    "./interactive/sq-details": {
+      "types": "./dist/components/interactive/sq-details.d.ts",
+      "import": "./dist/interactive/sq-details.js"
+    },
+    "./interactive/sq-progress": {
+      "types": "./dist/components/interactive/sq-progress.d.ts",
+      "import": "./dist/interactive/sq-progress.js"
+    },
+    "./interactive/sq-meter": {
+      "types": "./dist/components/interactive/sq-meter.d.ts",
+      "import": "./dist/interactive/sq-meter.js"
+    },
+    "./interactive/sq-switch": {
+      "types": "./dist/components/interactive/sq-switch.d.ts",
+      "import": "./dist/interactive/sq-switch.js"
+    },
+    "./interactive/sq-carousel": {
+      "types": "./dist/components/interactive/sq-carousel.d.ts",
+      "import": "./dist/interactive/sq-carousel.js"
+    },
+    "./interactive/sq-accordion": {
+      "types": "./dist/components/interactive/sq-accordion.d.ts",
+      "import": "./dist/interactive/sq-accordion.js"
+    },
+    "./interactive/sq-spinner": {
+      "types": "./dist/components/interactive/sq-spinner.d.ts",
+      "import": "./dist/interactive/sq-spinner.js"
+    },
+    "./interactive/sq-skeleton": {
+      "types": "./dist/components/interactive/sq-skeleton.d.ts",
+      "import": "./dist/interactive/sq-skeleton.js"
+    },
+    "./interactive/sq-collapsible": {
+      "types": "./dist/components/interactive/sq-collapsible.d.ts",
+      "import": "./dist/interactive/sq-collapsible.js"
+    },
+    "./interactive/sq-clipboard": {
+      "types": "./dist/components/interactive/sq-clipboard.d.ts",
+      "import": "./dist/interactive/sq-clipboard.js"
+    },
+    "./interactive/sq-split-button": {
+      "types": "./dist/components/interactive/sq-split-button.d.ts",
+      "import": "./dist/interactive/sq-split-button.js"
+    },
+    "./interactive/sq-button-group": {
+      "types": "./dist/components/interactive/sq-button-group.d.ts",
+      "import": "./dist/interactive/sq-button-group.js"
+    },
+    "./semantic/sq-article": {
+      "types": "./dist/components/semantic/sq-article.d.ts",
+      "import": "./dist/semantic/sq-article.js"
+    },
+    "./semantic/sq-section": {
+      "types": "./dist/components/semantic/sq-section.d.ts",
+      "import": "./dist/semantic/sq-section.js"
+    },
+    "./semantic/sq-nav": {
+      "types": "./dist/components/semantic/sq-nav.d.ts",
+      "import": "./dist/semantic/sq-nav.js"
+    },
+    "./semantic/sq-header": {
+      "types": "./dist/components/semantic/sq-header.d.ts",
+      "import": "./dist/semantic/sq-header.js"
+    },
+    "./semantic/sq-footer": {
+      "types": "./dist/components/semantic/sq-footer.d.ts",
+      "import": "./dist/semantic/sq-footer.js"
+    },
+    "./semantic/sq-aside": {
+      "types": "./dist/components/semantic/sq-aside.d.ts",
+      "import": "./dist/semantic/sq-aside.js"
+    },
+    "./semantic/sq-main": {
+      "types": "./dist/components/semantic/sq-main.d.ts",
+      "import": "./dist/semantic/sq-main.js"
+    },
+    "./semantic/sq-search": {
+      "types": "./dist/components/semantic/sq-search.d.ts",
+      "import": "./dist/semantic/sq-search.js"
+    },
+    "./semantic/sq-hgroup": {
+      "types": "./dist/components/semantic/sq-hgroup.d.ts",
+      "import": "./dist/semantic/sq-hgroup.js"
+    },
+    "./text/sq-text": {
+      "types": "./dist/components/text/sq-text.d.ts",
+      "import": "./dist/text/sq-text.js"
+    },
+    "./text/sq-code": {
+      "types": "./dist/components/text/sq-code.d.ts",
+      "import": "./dist/text/sq-code.js"
+    },
+    "./text/sq-mark": {
+      "types": "./dist/components/text/sq-mark.d.ts",
+      "import": "./dist/text/sq-mark.js"
+    },
+    "./text/sq-kbd": {
+      "types": "./dist/components/text/sq-kbd.d.ts",
+      "import": "./dist/text/sq-kbd.js"
+    },
+    "./text/sq-blockquote": {
+      "types": "./dist/components/text/sq-blockquote.d.ts",
+      "import": "./dist/text/sq-blockquote.js"
+    },
+    "./text/sq-caption": {
+      "types": "./dist/components/text/sq-caption.d.ts",
+      "import": "./dist/text/sq-caption.js"
+    },
+    "./text/sq-heading": {
+      "types": "./dist/components/text/sq-heading.d.ts",
+      "import": "./dist/text/sq-heading.js"
+    },
+    "./media/sq-image": {
+      "types": "./dist/components/media/sq-image.d.ts",
+      "import": "./dist/media/sq-image.js"
+    },
+    "./media/sq-audio": {
+      "types": "./dist/components/media/sq-audio.d.ts",
+      "import": "./dist/media/sq-audio.js"
+    },
+    "./media/sq-video": {
+      "types": "./dist/components/media/sq-video.d.ts",
+      "import": "./dist/media/sq-video.js"
+    },
+    "./media/sq-iframe": {
+      "types": "./dist/components/media/sq-iframe.d.ts",
+      "import": "./dist/media/sq-iframe.js"
+    },
+    "./layout/sq-card": {
+      "types": "./dist/components/layout/sq-card.d.ts",
+      "import": "./dist/layout/sq-card.js"
+    },
+    "./layout/sq-divider": {
+      "types": "./dist/components/layout/sq-divider.d.ts",
+      "import": "./dist/layout/sq-divider.js"
+    },
+    "./layout/sq-container": {
+      "types": "./dist/components/layout/sq-container.d.ts",
+      "import": "./dist/layout/sq-container.js"
+    },
+    "./layout/sq-grid": {
+      "types": "./dist/components/layout/sq-grid.d.ts",
+      "import": "./dist/layout/sq-grid.js"
+    },
+    "./layout/sq-flex": {
+      "types": "./dist/components/layout/sq-flex.d.ts",
+      "import": "./dist/layout/sq-flex.js"
+    },
+    "./layout/sq-stack": {
+      "types": "./dist/components/layout/sq-stack.d.ts",
+      "import": "./dist/layout/sq-stack.js"
+    },
+    "./layout/sq-masonry": {
+      "types": "./dist/components/layout/sq-masonry.d.ts",
+      "import": "./dist/layout/sq-masonry.js"
+    },
+    "./layout/sq-theme": {
+      "types": "./dist/components/layout/sq-theme.d.ts",
+      "import": "./dist/layout/sq-theme.js"
+    },
+    "./form/sq-input": {
+      "types": "./dist/components/form/sq-input.d.ts",
+      "import": "./dist/form/sq-input.js"
+    },
+    "./form/sq-select": {
+      "types": "./dist/components/form/sq-select.d.ts",
+      "import": "./dist/form/sq-select.js"
+    },
+    "./form/sq-textarea": {
+      "types": "./dist/components/form/sq-textarea.d.ts",
+      "import": "./dist/form/sq-textarea.js"
+    },
+    "./form/sq-checkbox": {
+      "types": "./dist/components/form/sq-checkbox.d.ts",
+      "import": "./dist/form/sq-checkbox.js"
+    },
+    "./form/sq-radio": {
+      "types": "./dist/components/form/sq-radio.d.ts",
+      "import": "./dist/form/sq-radio.js"
+    },
+    "./form/sq-label": {
+      "types": "./dist/components/form/sq-label.d.ts",
+      "import": "./dist/form/sq-label.js"
+    },
+    "./form/sq-fieldset": {
+      "types": "./dist/components/form/sq-fieldset.d.ts",
+      "import": "./dist/form/sq-fieldset.js"
+    },
+    "./form/sq-range": {
+      "types": "./dist/components/form/sq-range.d.ts",
+      "import": "./dist/form/sq-range.js"
+    },
+    "./form/sq-color-picker": {
+      "types": "./dist/components/form/sq-color-picker.d.ts",
+      "import": "./dist/form/sq-color-picker.js"
+    },
+    "./form/sq-date-picker": {
+      "types": "./dist/components/form/sq-date-picker.d.ts",
+      "import": "./dist/form/sq-date-picker.js"
+    },
+    "./form/sq-date-range": {
+      "types": "./dist/components/form/sq-date-range.d.ts",
+      "import": "./dist/form/sq-date-range.js"
+    },
+    "./form/sq-file-upload": {
+      "types": "./dist/components/form/sq-file-upload.d.ts",
+      "import": "./dist/form/sq-file-upload.js"
+    },
+    "./form/sq-input-group": {
+      "types": "./dist/components/form/sq-input-group.d.ts",
+      "import": "./dist/form/sq-input-group.js"
+    },
+    "./form/sq-radio-group": {
+      "types": "./dist/components/form/sq-radio-group.d.ts",
+      "import": "./dist/form/sq-radio-group.js"
+    },
+    "./form/sq-checkbox-group": {
+      "types": "./dist/components/form/sq-checkbox-group.d.ts",
+      "import": "./dist/form/sq-checkbox-group.js"
+    },
+    "./form/sq-form": {
+      "types": "./dist/components/form/sq-form.d.ts",
+      "import": "./dist/form/sq-form.js"
+    },
+    "./table/sq-table": {
+      "types": "./dist/components/table/sq-table.d.ts",
+      "import": "./dist/table/sq-table.js"
+    },
+    "./table/sq-th": {
+      "types": "./dist/components/table/sq-th.d.ts",
+      "import": "./dist/table/sq-th.js"
+    },
+    "./table/sq-td": {
+      "types": "./dist/components/table/sq-td.d.ts",
+      "import": "./dist/table/sq-td.js"
+    },
+    "./list/sq-list": {
+      "types": "./dist/components/list/sq-list.d.ts",
+      "import": "./dist/list/sq-list.js"
+    },
+    "./list/sq-definition-list": {
+      "types": "./dist/components/list/sq-definition-list.d.ts",
+      "import": "./dist/list/sq-definition-list.js"
+    },
+    "./navigation/sq-link": {
+      "types": "./dist/components/navigation/sq-link.d.ts",
+      "import": "./dist/navigation/sq-link.js"
+    },
+    "./navigation/sq-breadcrumb": {
+      "types": "./dist/components/navigation/sq-breadcrumb.d.ts",
+      "import": "./dist/navigation/sq-breadcrumb.js"
+    },
+    "./navigation/sq-menu": {
+      "types": "./dist/components/navigation/sq-menu.d.ts",
+      "import": "./dist/navigation/sq-menu.js"
+    },
+    "./navigation/sq-menu-item": {
+      "types": "./dist/components/navigation/sq-menu-item.d.ts",
+      "import": "./dist/navigation/sq-menu-item.js"
+    },
+    "./navigation/sq-menu-divider": {
+      "types": "./dist/components/navigation/sq-menu-divider.d.ts",
+      "import": "./dist/navigation/sq-menu-divider.js"
+    },
+    "./navigation/sq-stepper": {
+      "types": "./dist/components/navigation/sq-stepper.d.ts",
+      "import": "./dist/navigation/sq-stepper.js"
+    },
+    "./navigation/sq-tabs": {
+      "types": "./dist/components/navigation/sq-tabs.d.ts",
+      "import": "./dist/navigation/sq-tabs.js"
+    },
+    "./feedback/sq-alert": {
+      "types": "./dist/components/feedback/sq-alert.d.ts",
+      "import": "./dist/feedback/sq-alert.js"
+    },
+    "./overlay/sq-drawer": {
+      "types": "./dist/components/overlay/sq-drawer.d.ts",
+      "import": "./dist/overlay/sq-drawer.js"
+    },
+    "./overlay/sq-tooltip": {
+      "types": "./dist/components/overlay/sq-tooltip.d.ts",
+      "import": "./dist/overlay/sq-tooltip.js"
+    },
+    "./overlay/sq-dropdown": {
+      "types": "./dist/components/overlay/sq-dropdown.d.ts",
+      "import": "./dist/overlay/sq-dropdown.js"
+    },
+    "./data-display/sq-timeline": {
+      "types": "./dist/components/data-display/sq-timeline.d.ts",
+      "import": "./dist/data-display/sq-timeline.js"
+    },
+    "./data-display/sq-timetree": {
+      "types": "./dist/components/data-display/sq-timetree.d.ts",
+      "import": "./dist/data-display/sq-timetree.js"
+    },
+    "./data-display/sq-tree": {
+      "types": "./dist/components/data-display/sq-tree.d.ts",
+      "import": "./dist/data-display/sq-tree.js"
+    },
+    "./data-display/sq-pagination": {
+      "types": "./dist/components/data-display/sq-pagination.d.ts",
+      "import": "./dist/data-display/sq-pagination.js"
+    },
+    "./data-display/sq-avatar": {
+      "types": "./dist/components/data-display/sq-avatar.d.ts",
+      "import": "./dist/data-display/sq-avatar.js"
+    },
+    "./data-display/sq-tag": {
+      "types": "./dist/components/data-display/sq-tag.d.ts",
+      "import": "./dist/data-display/sq-tag.js"
+    },
+    "./head/sq-head-elements": {
+      "types": "./dist/components/head/sq-head-elements.d.ts",
+      "import": "./dist/head/sq-head-elements.js"
+    },
+    "./data-display/sq-badge": {
+      "types": "./dist/components/data-display/sq-badge.d.ts",
+      "import": "./dist/data-display/sq-badge.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test-server": "vite --port 3000",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "design-system",
+    "squiddy",
+    "storybook"
+  ],
+  "author": "Squiddy",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^3.3.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@storybook/addon-a11y": "^10.6.7",
+    "@storybook/addon-docs": "^10.6.7",
+    "@storybook/web-components-vite": "^10.6.7",
+    "@types/node": "^26.6.6",
+    "@typescript/typescript6": "^6.0.2",
+    "@web/dev-server-esbuild": "^2.0.1",
+    "sb-theme-switcher": "^1.1.0",
+    "storybook": "^10.6.7",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vite-plugin-dts": "^5.1.2"
+  }
+}

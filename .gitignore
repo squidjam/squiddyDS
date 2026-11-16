@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+storybook-static/
+
+# Test artifacts
+test-results/
+playwright-report/
+test-results/.last-run.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+debug-storybook.log
+
+# Junie session files
+.junie/
+
+# Environment files
+.env
+.env.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Coverage
+coverage/

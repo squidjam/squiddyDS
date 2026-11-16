@@ -1,0 +1,44 @@
+{
+  "name": "eslint-plugin-squiddyds",
+  "version": "1.0.0",
+  "description": "ESLint plugin for Squiddy Design System — validates attributes, detects typos, and enforces best practices",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "squiddyds",
+    "web-components",
+    "lit",
+    "design-system"
+  ],
+  "author": "Squiddy",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^8.72.2",
+    "@typescript-eslint/types": "^8.72.2",
+    "@typescript-eslint/utils": "^8.72.2",
+    "eslint": "^10.15.0",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  }
+}
