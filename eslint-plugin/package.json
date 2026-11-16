@@ -25,7 +25,7 @@
     "lit",
     "design-system"
   ],
-  "author": "Squiddy",
+  "author": "Rebecca Frances Cansinos",
   "license": "MIT",
   "peerDependencies": {
     "eslint": ">=8.0.0"
