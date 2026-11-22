@@ -1,0 +1,25 @@
+name: OSV-Scanner Scheduled Scan
+
+on:
+  schedule:
+    # Run every Monday at 12:30 PM UTC
+    - cron: "30 12 * * 1"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  # Required to upload SARIF file to CodeQL.
+  actions: read
+  # Require writing security events to upload SARIF file to security tab
+  security-events: write
+  # Only need to read contents
+  contents: read
+
+jobs:
+  scan-scheduled:
+    uses: "google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@v2.7.0"
+    with:
+      scan-args: |-
+        --recursive
+        ./
