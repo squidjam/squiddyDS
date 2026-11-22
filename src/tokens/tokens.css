@@ -21,7 +21,7 @@ html[sq-mode="light"],
 
   /* ---- Foreground / Text ---- */
   --sq-fg-default: #370130;
-  --sq-fg-muted: #BB5DAF;
+  --sq-fg-muted: #8A3D8F;
   --sq-fg-inverse: #FFFDF8;
   --sq-fg-link: #AF019A;
   --sq-fg-link-hover: #FE00F0;
@@ -29,20 +29,20 @@ html[sq-mode="light"],
   /* ---- Borders ---- */
   --sq-border-default: #AF019A;
   --sq-border-subtle: rgba(175, 1, 154, 0.2);
-  --sq-border-focus: #FE00F0;
+  --sq-border-focus: #AF019A;
 
   /* ---- Accent Colors ---- */
-  --sq-accent-primary: #FE00F0;
-  --sq-accent-primary-hover: #E300C9;
-  --sq-accent-primary-active: #C700AD;
+  --sq-accent-primary: #C700AD;
+  --sq-accent-primary-hover: #AF019A;
+  --sq-accent-primary-active: #8A017A;
   --sq-accent-primary-light: rgba(254, 0, 240, 0.1);
   --sq-accent-primary-light-hover: rgba(254, 0, 240, 0.18);
 
   /* ---- Semantic Colors ---- */
-  --sq-color-success: #16a34a;
-  --sq-color-success-light: rgba(22, 163, 74, 0.1);
-  --sq-color-warning: #d97706;
-  --sq-color-warning-light: rgba(217, 119, 6, 0.1);
+  --sq-color-success: #15803D;
+  --sq-color-success-light: rgba(21, 128, 61, 0.1);
+  --sq-color-warning: #B45309;
+  --sq-color-warning-light: rgba(180, 83, 9, 0.1);
   --sq-color-danger: #B42318;
   --sq-color-danger-light: rgba(180, 35, 24, 0.1);
   --sq-color-info: #2563eb;
@@ -229,4 +229,13 @@ body {
 ::selection {
   background: var(--sq-accent-primary-light);
   color: var(--sq-fg-default);
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

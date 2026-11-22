@@ -18,21 +18,21 @@ export default meta;
 type Story = StoryObj;
 
 const sampleNodes = [
-  { id: '1', label: 'Documents', icon: '📁', expanded: true, children: [
-    { id: '1-1', label: 'Work', icon: '📁', children: [
-      { id: '1-1-1', label: 'Reports', icon: '📄' },
-      { id: '1-1-2', label: 'Presentations', icon: '📄' },
+  { id: '1', label: 'Documents', expanded: true, children: [
+    { id: '1-1', label: 'Work', children: [
+      { id: '1-1-1', label: 'Reports' },
+      { id: '1-1-2', label: 'Presentations' },
     ]},
-    { id: '1-2', label: 'Personal', icon: '📁', children: [
-      { id: '1-2-1', label: 'Photos', icon: '🖼️' },
-      { id: '1-2-2', label: 'Notes', icon: '📝' },
+    { id: '1-2', label: 'Personal', children: [
+      { id: '1-2-1', label: 'Photos' },
+      { id: '1-2-2', label: 'Notes' },
     ]},
   ]},
-  { id: '2', label: 'Downloads', icon: '📁', children: [
-    { id: '2-1', label: 'Images', icon: '🖼️' },
-    { id: '2-2', label: 'Videos', icon: '🎬' },
+  { id: '2', label: 'Downloads', children: [
+    { id: '2-1', label: 'Images' },
+    { id: '2-2', label: 'Videos' },
   ]},
-  { id: '3', label: 'Desktop', icon: '🖥️' },
+  { id: '3', label: 'Desktop' },
 ];
 
 export const Default: Story = {

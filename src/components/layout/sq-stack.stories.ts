@@ -94,7 +94,7 @@ export const AllVariants: Story = {
         <p style="font-weight: 600; margin-bottom: 8px; font-size: var(--sq-text-sm);">Row</p>
         <sq-stack direction="row">
           ${stackItem('#ef4444', '1')}
-          ${stackItem('#8b5cf6', '2')}
+          ${stackItem('#D946EF', '2')}
           ${stackItem('#ec4899', '3')}
         </sq-stack>
       </div>
@@ -109,7 +109,7 @@ export const AllVariants: Story = {
       <div>
         <p style="font-weight: 600; margin-bottom: 8px; font-size: var(--sq-text-sm);">Large Gap</p>
         <sq-stack direction="column" gap="var(--sq-space-8)">
-          ${stackItem('#6366f1', '1')}
+          ${stackItem('#D946EF', '1')}
           ${stackItem('#14b8a6', '2')}
           ${stackItem('#e11d48', '3')}
         </sq-stack>

@@ -66,7 +66,7 @@ export const WithHeader: Story = {
     ];
     tree.branches = [
       { name: 'main', color: '#3b82f6' },
-      { name: 'feature/profiles', color: '#a855f7' },
+      { name: 'feature/profiles', color: '#D946EF' },
     ];
     return wrapper;
   },
