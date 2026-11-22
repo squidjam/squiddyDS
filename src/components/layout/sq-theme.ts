@@ -322,6 +322,7 @@ export class SqTheme extends LitElement {
       --sq-accent-primary-active: #7D5D00;
       --sq-accent-primary-light: rgba(184, 150, 0, 0.1);
       --sq-accent-primary-light-hover: rgba(184, 150, 0, 0.18);
+      --sq-accent-text: #7D5D00;
     }
 
     /* Gold — Dark Mode */
