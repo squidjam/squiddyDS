@@ -12,6 +12,19 @@ import { customElement, property } from 'lit/decorators.js';
  *
  * Available themes: blue, red, lime, cyan, green, gold, pink, fuchsia, magenta, rainbow, sq-theme
  *
+ * Modifiers (composable with any theme):
+ *
+ * - `sq-shape`: Controls corner roundedness. Values: `round` (default), `soft`, `square`.
+ * - `sq-shadow`: Controls shadow depth. Values: `flat`, `normal` (default), `deep`.
+ *
+ * Presets (bundled modifier packs — one shortcut for a complete look):
+ *
+ * - `sq-preset="vaporwave"`: Pink→purple→cyan gradient backgrounds, square corners, deep shadows.
+ * - `sq-preset="sunset"`: Orange→pink gradient backgrounds, soft corners, deep shadows.
+ * - `sq-preset="ocean"`: Blue→teal gradient backgrounds, soft corners, deep shadows.
+ *
+ * Presets override any `sq-theme` value. Modifiers layer on top of both themes and presets.
+ *
  * @example
  *   <sq-theme sq-theme="blue">
  *     <!-- All components inside will use the blue theme overrides -->
@@ -20,6 +33,21 @@ import { customElement, property } from 'lit/decorators.js';
  * @example
  *   <sq-theme sq-theme="red" sq-mode="dark">
  *     <!-- Red theme with dark mode -->
+ *   </sq-theme>
+ *
+ * @example
+ *   <sq-theme sq-theme="cyan" sq-shape="square" sq-shadow="deep">
+ *     <!-- Cyan theme with square corners and deep shadows -->
+ *   </sq-theme>
+ *
+ * @example
+ *   <sq-theme sq-preset="vaporwave">
+ *     <!-- Vaporwave preset: gradient + square + deep -->
+ *   </sq-theme>
+ *
+ * @example
+ *   <sq-theme sq-preset="vaporwave" sq-mode="dark">
+ *     <!-- Vaporwave preset in dark mode -->
  *   </sq-theme>
  */
 @customElement('sq-theme')
@@ -1045,10 +1073,310 @@ export class SqTheme extends LitElement {
       --sq-fg-link-hover: #C71585;
       --sq-fg-inverse: #1A0A16;
     }
+
+    /* ======================================================================
+       MODIFIER: sq-shape — corner roundedness
+       Values: round (default) / soft / square
+       These override the radius tokens for all descendant components.
+       ====================================================================== */
+
+    /* sq-shape="soft" — slightly rounded corners */
+    :host([sq-shape="soft"]) .theme-wrapper {
+      --sq-radius-none: 0px;
+      --sq-radius-sm: 2px;
+      --sq-radius-md: 4px;
+      --sq-radius-lg: 6px;
+      --sq-radius-xl: 8px;
+      --sq-radius-full: 9999px;
+    }
+
+    /* sq-shape="square" — completely flat corners */
+    :host([sq-shape="square"]) .theme-wrapper {
+      --sq-radius-none: 0px;
+      --sq-radius-sm: 0px;
+      --sq-radius-md: 0px;
+      --sq-radius-lg: 0px;
+      --sq-radius-xl: 0px;
+      --sq-radius-full: 0px;
+    }
+
+    /* ======================================================================
+       MODIFIER: sq-shadow — shadow depth
+       Values: flat / normal (default) / deep
+       These override the shadow tokens for all descendant components.
+       ====================================================================== */
+
+    /* sq-shadow="flat" — no shadows */
+    :host([sq-shadow="flat"]) .theme-wrapper {
+      --sq-shadow-sm: none;
+      --sq-shadow-md: none;
+      --sq-shadow-lg: none;
+    }
+
+    /* sq-shadow="deep" — dramatic shadows */
+    :host([sq-shadow="deep"]) .theme-wrapper {
+      --sq-shadow-sm: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+      --sq-shadow-md: 0px 12px 32px 0px rgba(0, 0, 0, 0.2);
+      --sq-shadow-lg: 0px 24px 64px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Deep shadows in dark mode — more pronounced */
+    :host([sq-shadow="deep"][sq-mode="dark"]) .theme-wrapper,
+    :host([sq-shadow="deep"]) .theme-wrapper[sq-mode="dark"] {
+      --sq-shadow-sm: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
+      --sq-shadow-md: 0px 12px 32px 0px rgba(0, 0, 0, 0.6);
+      --sq-shadow-lg: 0px 24px 64px 0px rgba(0, 0, 0, 0.7);
+    }
+
+    /* ======================================================================
+       PRESET: vaporwave — pink→purple→cyan gradient, square, deep
+       A nostalgic 80s aesthetic with neon gradients.
+       ====================================================================== */
+    :host([sq-preset="vaporwave"]) .theme-wrapper {
+      /* Gradient backgrounds */
+      --sq-bg-default: linear-gradient(135deg, #FF6B9D 0%, #C44DFF 50%, #00D4FF 100%);
+      --sq-bg-surface: rgba(255, 255, 255, 0.15);
+      --sq-bg-elevated: rgba(255, 255, 255, 0.25);
+      --sq-bg-inverse: #1A0A2E;
+      --sq-bg-overlay: rgba(26, 10, 46, 0.6);
+      --sq-bg-subtle: rgba(196, 77, 255, 0.2);
+      --sq-bg-header: rgba(255, 107, 157, 0.3);
+
+      /* Foreground */
+      --sq-fg-default: #FFFFFF;
+      --sq-fg-muted: #FFB4D0;
+      --sq-fg-inverse: #1A0A2E;
+      --sq-fg-link: #00D4FF;
+      --sq-fg-link-hover: #FF6B9D;
+
+      /* Borders */
+      --sq-border-default: rgba(255, 255, 255, 0.3);
+      --sq-border-subtle: rgba(255, 255, 255, 0.15);
+      --sq-border-focus: #00D4FF;
+
+      /* Accent */
+      --sq-accent-primary: #00D4FF;
+      --sq-accent-primary-hover: #FF6B9D;
+      --sq-accent-primary-active: #C44DFF;
+      --sq-accent-primary-light: rgba(0, 212, 255, 0.2);
+      --sq-accent-primary-light-hover: rgba(0, 212, 255, 0.35);
+
+      /* Square corners */
+      --sq-radius-none: 0px;
+      --sq-radius-sm: 0px;
+      --sq-radius-md: 0px;
+      --sq-radius-lg: 0px;
+      --sq-radius-xl: 0px;
+      --sq-radius-full: 0px;
+
+      /* Deep shadows */
+      --sq-shadow-sm: 0px 2px 8px 0px rgba(196, 77, 255, 0.3);
+      --sq-shadow-md: 0px 12px 32px 0px rgba(196, 77, 255, 0.4);
+      --sq-shadow-lg: 0px 24px 64px 0px rgba(196, 77, 255, 0.5);
+    }
+
+    /* Vaporwave — Dark Mode */
+    :host([sq-preset="vaporwave"][sq-mode="dark"]) .theme-wrapper,
+    :host([sq-preset="vaporwave"]) .theme-wrapper[sq-mode="dark"] {
+      --sq-bg-default: linear-gradient(135deg, #2D0A3E 0%, #1A0A2E 50%, #0A1A2E 100%);
+      --sq-bg-surface: rgba(255, 255, 255, 0.08);
+      --sq-bg-elevated: rgba(255, 255, 255, 0.15);
+      --sq-bg-inverse: #FF6B9D;
+      --sq-bg-overlay: rgba(10, 10, 30, 0.8);
+      --sq-bg-subtle: rgba(196, 77, 255, 0.15);
+      --sq-bg-header: rgba(45, 10, 62, 0.8);
+
+      --sq-fg-default: #F0ABFC;
+      --sq-fg-muted: #C44DFF;
+      --sq-fg-inverse: #1A0A2E;
+      --sq-fg-link: #00D4FF;
+      --sq-fg-link-hover: #FF6B9D;
+
+      --sq-border-default: rgba(196, 77, 255, 0.3);
+      --sq-border-subtle: rgba(196, 77, 255, 0.12);
+      --sq-border-focus: #00D4FF;
+
+      --sq-accent-primary: #00D4FF;
+      --sq-accent-primary-hover: #FF6B9D;
+      --sq-accent-primary-active: #C44DFF;
+      --sq-accent-primary-light: rgba(0, 212, 255, 0.15);
+      --sq-accent-primary-light-hover: rgba(0, 212, 255, 0.25);
+
+      --sq-shadow-sm: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
+      --sq-shadow-md: 0px 12px 32px 0px rgba(0, 0, 0, 0.6);
+      --sq-shadow-lg: 0px 24px 64px 0px rgba(0, 0, 0, 0.7);
+    }
+
+    /* ======================================================================
+       PRESET: sunset — orange→pink gradient, soft corners, deep
+       A warm, inviting aesthetic with golden-hour tones.
+       ====================================================================== */
+    :host([sq-preset="sunset"]) .theme-wrapper {
+      /* Gradient backgrounds */
+      --sq-bg-default: linear-gradient(135deg, #FF9A56 0%, #FF6B9D 50%, #C44DFF 100%);
+      --sq-bg-surface: rgba(255, 255, 255, 0.15);
+      --sq-bg-elevated: rgba(255, 255, 255, 0.25);
+      --sq-bg-inverse: #2D0A1A;
+      --sq-bg-overlay: rgba(45, 10, 26, 0.6);
+      --sq-bg-subtle: rgba(255, 154, 86, 0.2);
+      --sq-bg-header: rgba(255, 107, 157, 0.3);
+
+      /* Foreground */
+      --sq-fg-default: #FFFFFF;
+      --sq-fg-muted: #FFD4B4;
+      --sq-fg-inverse: #2D0A1A;
+      --sq-fg-link: #FF9A56;
+      --sq-fg-link-hover: #FF6B9D;
+
+      /* Borders */
+      --sq-border-default: rgba(255, 255, 255, 0.3);
+      --sq-border-subtle: rgba(255, 255, 255, 0.15);
+      --sq-border-focus: #FF9A56;
+
+      /* Accent */
+      --sq-accent-primary: #FF9A56;
+      --sq-accent-primary-hover: #FF6B9D;
+      --sq-accent-primary-active: #C44DFF;
+      --sq-accent-primary-light: rgba(255, 154, 86, 0.2);
+      --sq-accent-primary-light-hover: rgba(255, 154, 86, 0.35);
+
+      /* Soft corners */
+      --sq-radius-none: 0px;
+      --sq-radius-sm: 2px;
+      --sq-radius-md: 4px;
+      --sq-radius-lg: 6px;
+      --sq-radius-xl: 8px;
+      --sq-radius-full: 9999px;
+
+      /* Deep shadows */
+      --sq-shadow-sm: 0px 2px 8px 0px rgba(255, 107, 157, 0.25);
+      --sq-shadow-md: 0px 12px 32px 0px rgba(255, 107, 157, 0.35);
+      --sq-shadow-lg: 0px 24px 64px 0px rgba(255, 107, 157, 0.45);
+    }
+
+    /* Sunset — Dark Mode */
+    :host([sq-preset="sunset"][sq-mode="dark"]) .theme-wrapper,
+    :host([sq-preset="sunset"]) .theme-wrapper[sq-mode="dark"] {
+      --sq-bg-default: linear-gradient(135deg, #2D0A1A 0%, #1A0A2E 50%, #0A0A2E 100%);
+      --sq-bg-surface: rgba(255, 255, 255, 0.08);
+      --sq-bg-elevated: rgba(255, 255, 255, 0.15);
+      --sq-bg-inverse: #FF9A56;
+      --sq-bg-overlay: rgba(10, 10, 30, 0.8);
+      --sq-bg-subtle: rgba(255, 154, 86, 0.15);
+      --sq-bg-header: rgba(45, 10, 26, 0.8);
+
+      --sq-fg-default: #FFD4B4;
+      --sq-fg-muted: #FF9A56;
+      --sq-fg-inverse: #2D0A1A;
+      --sq-fg-link: #FF9A56;
+      --sq-fg-link-hover: #FF6B9D;
+
+      --sq-border-default: rgba(255, 154, 86, 0.3);
+      --sq-border-subtle: rgba(255, 154, 86, 0.12);
+      --sq-border-focus: #FF9A56;
+
+      --sq-accent-primary: #FF9A56;
+      --sq-accent-primary-hover: #FF6B9D;
+      --sq-accent-primary-active: #C44DFF;
+      --sq-accent-primary-light: rgba(255, 154, 86, 0.15);
+      --sq-accent-primary-light-hover: rgba(255, 154, 86, 0.25);
+
+      --sq-shadow-sm: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
+      --sq-shadow-md: 0px 12px 32px 0px rgba(0, 0, 0, 0.6);
+      --sq-shadow-lg: 0px 24px 64px 0px rgba(0, 0, 0, 0.7);
+    }
+
+    /* ======================================================================
+       PRESET: ocean — blue→teal gradient, soft corners, deep
+       A cool, calming aesthetic with deep-sea tones.
+       ====================================================================== */
+    :host([sq-preset="ocean"]) .theme-wrapper {
+      /* Gradient backgrounds */
+      --sq-bg-default: linear-gradient(135deg, #0077B6 0%, #00B4D8 50%, #00D4A0 100%);
+      --sq-bg-surface: rgba(255, 255, 255, 0.15);
+      --sq-bg-elevated: rgba(255, 255, 255, 0.25);
+      --sq-bg-inverse: #0A1A2E;
+      --sq-bg-overlay: rgba(10, 26, 46, 0.6);
+      --sq-bg-subtle: rgba(0, 180, 216, 0.2);
+      --sq-bg-header: rgba(0, 119, 182, 0.3);
+
+      /* Foreground */
+      --sq-fg-default: #FFFFFF;
+      --sq-fg-muted: #B4E0FF;
+      --sq-fg-inverse: #0A1A2E;
+      --sq-fg-link: #00D4A0;
+      --sq-fg-link-hover: #00B4D8;
+
+      /* Borders */
+      --sq-border-default: rgba(255, 255, 255, 0.3);
+      --sq-border-subtle: rgba(255, 255, 255, 0.15);
+      --sq-border-focus: #00D4A0;
+
+      /* Accent */
+      --sq-accent-primary: #00D4A0;
+      --sq-accent-primary-hover: #00B4D8;
+      --sq-accent-primary-active: #0077B6;
+      --sq-accent-primary-light: rgba(0, 212, 160, 0.2);
+      --sq-accent-primary-light-hover: rgba(0, 212, 160, 0.35);
+
+      /* Soft corners */
+      --sq-radius-none: 0px;
+      --sq-radius-sm: 2px;
+      --sq-radius-md: 4px;
+      --sq-radius-lg: 6px;
+      --sq-radius-xl: 8px;
+      --sq-radius-full: 9999px;
+
+      /* Deep shadows */
+      --sq-shadow-sm: 0px 2px 8px 0px rgba(0, 119, 182, 0.25);
+      --sq-shadow-md: 0px 12px 32px 0px rgba(0, 119, 182, 0.35);
+      --sq-shadow-lg: 0px 24px 64px 0px rgba(0, 119, 182, 0.45);
+    }
+
+    /* Ocean — Dark Mode */
+    :host([sq-preset="ocean"][sq-mode="dark"]) .theme-wrapper,
+    :host([sq-preset="ocean"]) .theme-wrapper[sq-mode="dark"] {
+      --sq-bg-default: linear-gradient(135deg, #0A1A2E 0%, #0A2A3E 50%, #0A1A2E 100%);
+      --sq-bg-surface: rgba(255, 255, 255, 0.08);
+      --sq-bg-elevated: rgba(255, 255, 255, 0.15);
+      --sq-bg-inverse: #00D4A0;
+      --sq-bg-overlay: rgba(10, 10, 30, 0.8);
+      --sq-bg-subtle: rgba(0, 180, 216, 0.15);
+      --sq-bg-header: rgba(10, 26, 46, 0.8);
+
+      --sq-fg-default: #90E0EF;
+      --sq-fg-muted: #00B4D8;
+      --sq-fg-inverse: #0A1A2E;
+      --sq-fg-link: #00D4A0;
+      --sq-fg-link-hover: #00B4D8;
+
+      --sq-border-default: rgba(0, 180, 216, 0.3);
+      --sq-border-subtle: rgba(0, 180, 216, 0.12);
+      --sq-border-focus: #00D4A0;
+
+      --sq-accent-primary: #00D4A0;
+      --sq-accent-primary-hover: #00B4D8;
+      --sq-accent-primary-active: #0077B6;
+      --sq-accent-primary-light: rgba(0, 212, 160, 0.15);
+      --sq-accent-primary-light-hover: rgba(0, 212, 160, 0.25);
+
+      --sq-shadow-sm: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
+      --sq-shadow-md: 0px 12px 32px 0px rgba(0, 0, 0, 0.6);
+      --sq-shadow-lg: 0px 24px 64px 0px rgba(0, 0, 0, 0.7);
+    }
   `;
 
   /** The name of the theme to apply (e.g. "blue", "red", "rainbow", "sq-theme"). */
   @property({ type: String, attribute: 'sq-theme' }) sqTheme = '';
+
+  /** Corner roundedness modifier. Values: "round" (default), "soft", "square". */
+  @property({ type: String, attribute: 'sq-shape' }) sqShape = '';
+
+  /** Shadow depth modifier. Values: "flat", "normal" (default), "deep". */
+  @property({ type: String, attribute: 'sq-shadow' }) sqShadow = '';
+
+  /** Named preset that bundles colors, shape, and shadow. Values: "vaporwave", "sunset", "ocean". */
+  @property({ type: String, attribute: 'sq-preset' }) sqPreset = '';
 
   override render() {
     return html`<div class="theme-wrapper"><slot></slot></div>`;
