@@ -79,7 +79,7 @@ export const Wrap: Story = {
     const flex = document.createElement('sq-flex');
     flex.direction = 'row';
     flex.wrap = 'wrap';
-    flex.append(item('#3b82f6', '1'), item('#22c55e', '2'), item('#f59e0b', '3'), item('#ef4444', '4'), item('#8b5cf6', '5'), item('#ec4899', '6'));
+    flex.append(item('#3b82f6', '1'), item('#22c55e', '2'), item('#f59e0b', '3'), item('#ef4444', '4'), item('#D946EF', '5'), item('#ec4899', '6'));
     return flex;
   },
 };
@@ -114,12 +114,12 @@ export const AllVariants: Story = {
 
     const column = document.createElement('sq-flex');
     column.direction = 'column';
-    column.append(item('#ef4444', '1'), item('#8b5cf6', '2'), item('#ec4899', '3'));
+    column.append(item('#ef4444', '1'), item('#D946EF', '2'), item('#ec4899', '3'));
 
     const wrap = document.createElement('sq-flex');
     wrap.direction = 'row';
     wrap.wrap = 'wrap';
-    wrap.append(item('#06b6d4', '1'), item('#84cc16', '2'), item('#f97316', '3'), item('#6366f1', '4'));
+    wrap.append(item('#06b6d4', '1'), item('#84cc16', '2'), item('#f97316', '3'), item('#D946EF', '4'));
 
     const spaceBetween = document.createElement('sq-flex');
     spaceBetween.direction = 'row';

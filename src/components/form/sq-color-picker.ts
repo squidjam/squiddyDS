@@ -537,7 +537,7 @@ export class SqColorPicker extends LitElement {
 
     const defaultPalette = [
       '#ef4444', '#f97316', '#f59e0b', '#eab308', '#84cc16', '#22c55e',
-      '#14b8a6', '#06b6d4', '#3b82f6', '#6366f1', '#8b5cf6', '#a855f7',
+      '#14b8a6', '#06b6d4', '#3b82f6', '#9333ea', '#a855f7', '#D946EF',
       '#d946ef', '#ec4899', '#f43f5e', '#000000', '#333333', '#666666',
       '#999999', '#cccccc', '#e5e5e5', '#ffffff',
     ];

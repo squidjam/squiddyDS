@@ -41,7 +41,7 @@ export const CustomPalette: Story = {
 export const WithHistory: Story = {
   render: () => html`
     <div style="display: flex; flex-direction: column; gap: 16px;">
-      <sq-color-picker value="#8b5cf6" history-size="5"></sq-color-picker>
+      <sq-color-picker value="#D946EF" history-size="5"></sq-color-picker>
       <p style="color: var(--sq-fg-muted); font-size: var(--sq-text-sm);">
         Select colors to build recent history (persisted in localStorage).
       </p>

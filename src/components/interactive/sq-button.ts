@@ -41,7 +41,8 @@ export class SqButton extends LitElement {
       font-family: var(--sq-font-family);
       font-size: var(--sq-text-sm);
       font-weight: var(--sq-font-weight-semibold);
-      line-height: 1;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
       cursor: pointer;
       transition: var(--sq-transition-color), transform var(--sq-motion-fast), box-shadow var(--sq-motion-fast);
       -webkit-font-smoothing: antialiased;
@@ -58,6 +59,22 @@ export class SqButton extends LitElement {
     button:active {
       background: var(--sq-accent-primary-active);
       transform: translateY(0);
+      box-shadow: none;
+    }
+
+    /* Primary and secondary variants get lift effect — semantic variants do not */
+    button[variant="danger"]:hover,
+    button[variant="success"]:hover,
+    button[variant="warning"]:hover,
+    button[variant="info"]:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    button[variant="danger"]:active,
+    button[variant="success"]:active,
+    button[variant="warning"]:active,
+    button[variant="info"]:active {
+      transform: none;
       box-shadow: none;
     }
 
@@ -112,12 +129,12 @@ export class SqButton extends LitElement {
       border-color: var(--sq-color-danger);
     }
     button[variant="danger"]:hover {
-      background: var(--sq-color-danger);
-      opacity: 0.85;
-      border-color: var(--sq-color-danger);
+      background: #9A1D15;
+      border-color: #9A1D15;
     }
     button[variant="danger"]:active {
-      opacity: 0.75;
+      background: #7D1710;
+      border-color: #7D1710;
     }
 
     /* ---- Success — filled green ---- */
@@ -127,12 +144,12 @@ export class SqButton extends LitElement {
       border-color: var(--sq-color-success);
     }
     button[variant="success"]:hover {
-      background: var(--sq-color-success);
-      opacity: 0.85;
-      border-color: var(--sq-color-success);
+      background: #127034;
+      border-color: #127034;
     }
     button[variant="success"]:active {
-      opacity: 0.75;
+      background: #0D5A28;
+      border-color: #0D5A28;
     }
 
     /* ---- Warning — filled amber ---- */
@@ -142,12 +159,12 @@ export class SqButton extends LitElement {
       border-color: var(--sq-color-warning);
     }
     button[variant="warning"]:hover {
-      background: var(--sq-color-warning);
-      opacity: 0.85;
-      border-color: var(--sq-color-warning);
+      background: #924408;
+      border-color: #924408;
     }
     button[variant="warning"]:active {
-      opacity: 0.75;
+      background: #763606;
+      border-color: #763606;
     }
 
     /* ---- Info — filled blue ---- */
@@ -157,12 +174,12 @@ export class SqButton extends LitElement {
       border-color: var(--sq-color-info);
     }
     button[variant="info"]:hover {
-      background: var(--sq-color-info);
-      opacity: 0.85;
-      border-color: var(--sq-color-info);
+      background: #1D4ED8;
+      border-color: #1D4ED8;
     }
     button[variant="info"]:active {
-      opacity: 0.75;
+      background: #1E40AF;
+      border-color: #1E40AF;
     }
 
     /* ---- Sizes ---- */

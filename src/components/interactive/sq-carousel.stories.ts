@@ -77,7 +77,7 @@ export const AutoPlay: Story = {
 export const SquareAspectRatio: Story = {
   render: () => html`
     <sq-carousel aspect-ratio="1/1" style="max-width: 400px;">
-      ${slideContent('#8b5cf6', 'Square 1')}
+      ${slideContent('#D946EF', 'Square 1')}
       ${slideContent('#ec4899', 'Square 2')}
       ${slideContent('#06b6d4', 'Square 3')}
     </sq-carousel>
@@ -114,7 +114,7 @@ export const AllVariants: Story = {
       <div>
         <p style="font-weight: 600; margin-bottom: 8px;">Auto-play with Counter</p>
         <sq-carousel auto-play interval="3000" show-counter pause-play style="max-width: 100%;">
-          ${slideContent('#8b5cf6', 'Auto 1')}
+          ${slideContent('#D946EF', 'Auto 1')}
           ${slideContent('#ec4899', 'Auto 2')}
           ${slideContent('#06b6d4', 'Auto 3')}
         </sq-carousel>

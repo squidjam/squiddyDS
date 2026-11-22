@@ -53,10 +53,10 @@ export const Programmatic: Story = {
     const timeline = document.createElement('sq-timeline');
     timeline.style.maxWidth = '400px';
     timeline.items = [
-      { date: '2024-01-15', title: 'Project Started', content: 'Initial project kickoff meeting.', icon: '🚀', variant: 'default' },
-      { date: '2024-03-20', title: 'Beta Release', content: 'First beta version released.', icon: '✅', variant: 'success' },
-      { date: '2024-04-10', title: 'Security Alert', content: 'Critical vulnerability patched.', icon: '⚠️', variant: 'warning' },
-      { date: '2024-06-01', title: 'Public Launch', content: 'Product launched publicly.', icon: '🎉', variant: 'info' },
+      { date: '2024-01-15', title: 'Project Started', content: 'Initial project kickoff meeting.', variant: 'default' },
+      { date: '2024-03-20', title: 'Beta Release', content: 'First beta version released.', variant: 'success' },
+      { date: '2024-04-10', title: 'Security Alert', content: 'Critical vulnerability patched.', variant: 'warning' },
+      { date: '2024-06-01', title: 'Public Launch', content: 'Product launched publicly.', variant: 'info' },
     ];
     return timeline;
   },
