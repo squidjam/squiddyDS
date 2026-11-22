@@ -3898,3 +3898,416 @@ export const SqTunes = () => html`
   </div>
 </div>
 `;
+
+// ============================================================================
+// SHAPE MODIFIERS
+// ============================================================================
+
+export const ShapeModifiers = () => html`
+  <h2>Shape Modifiers</h2>
+  <p>Use <code>sq-shape</code> to control corner roundedness: <code>round</code> (default), <code>soft</code>, <code>square</code>.</p>
+
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Round (default)</h3>
+      <sq-card padded>
+        <sq-heading size="sm">Rounded Corners</sq-heading>
+        <p>Standard border-radius values: 8px, 12px, 16px.</p>
+        <sq-button variant="primary">Action</sq-button>
+      </sq-card>
+    </div>
+
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Soft</h3>
+      <sq-theme sq-shape="soft">
+        <sq-card padded>
+          <sq-heading size="sm">Soft Corners</sq-heading>
+          <p>Slightly rounded: 4px, 6px, 8px.</p>
+          <sq-button variant="primary">Action</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Square</h3>
+      <sq-theme sq-shape="square">
+        <sq-card padded>
+          <sq-heading size="sm">Square Corners</sq-heading>
+          <p>All corners set to 0px for a sharp, modern look.</p>
+          <sq-button variant="primary">Action</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+  </div>
+`;
+
+// ============================================================================
+// SHADOW MODIFIERS
+// ============================================================================
+
+export const ShadowModifiers = () => html`
+  <h2>Shadow Modifiers</h2>
+  <p>Use <code>sq-shadow</code> to control shadow depth: <code>flat</code>, <code>normal</code> (default), <code>deep</code>.</p>
+
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Flat</h3>
+      <sq-theme sq-shadow="flat">
+        <sq-card padded>
+          <sq-heading size="sm">No Shadows</sq-heading>
+          <p>All shadow tokens set to <code>none</code> for a flat design.</p>
+          <sq-button variant="primary">Action</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Normal (default)</h3>
+      <sq-card padded>
+        <sq-heading size="sm">Normal Shadows</sq-heading>
+        <p>Subtle depth with standard shadow values.</p>
+        <sq-button variant="primary">Action</sq-button>
+      </sq-card>
+    </div>
+
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Deep</h3>
+      <sq-theme sq-shadow="deep">
+        <sq-card padded>
+          <sq-heading size="sm">Deep Shadows</sq-heading>
+          <p>Dramatic, pronounced shadows for elevated presence.</p>
+          <sq-button variant="primary">Action</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+  </div>
+`;
+
+// ============================================================================
+// COMBINED MODIFIERS
+// ============================================================================
+
+export const CombinedModifiers = () => html`
+  <h2>Combined Modifiers</h2>
+  <p>Stack <code>sq-shape</code> and <code>sq-shadow</code> with any theme for custom combinations.</p>
+
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Cyan + Square + Deep</h3>
+      <sq-theme sq-theme="cyan" sq-shape="square" sq-shadow="deep">
+        <sq-card padded>
+          <sq-heading size="sm">Sharp &amp; Elevated</sq-heading>
+          <p>Cyan theme with zero-radius corners and dramatic shadows.</p>
+          <sq-button variant="primary">Action</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Gold + Soft + Flat</h3>
+      <sq-theme sq-theme="gold" sq-shape="soft" sq-shadow="flat">
+        <sq-card padded>
+          <sq-heading size="sm">Soft &amp; Flat</sq-heading>
+          <p>Gold theme with gentle corners and no shadows.</p>
+          <sq-button variant="primary">Action</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 250px;">
+      <h3>Red + Square + Deep (Dark)</h3>
+      <sq-theme sq-theme="red" sq-mode="dark" sq-shape="square" sq-shadow="deep">
+        <sq-card padded>
+          <sq-heading size="sm">Dark &amp; Dramatic</sq-heading>
+          <p>Red dark mode with square corners and deep shadows.</p>
+          <sq-button variant="primary">Action</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+  </div>
+`;
+
+// ============================================================================
+// PRESETS
+// ============================================================================
+
+export const Presets = () => html`
+  <h2>Presets</h2>
+  <p>Use <code>sq-preset</code> for a complete look in one attribute: <code>vaporwave</code>, <code>sunset</code>, <code>ocean</code>.</p>
+
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Vaporwave</h3>
+      <sq-theme sq-preset="vaporwave">
+        <sq-card padded>
+          <sq-heading size="sm">Vaporwave</sq-heading>
+          <p>Pink to purple to cyan gradient, square corners, deep shadows.</p>
+          <sq-button variant="primary">Synthwave</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Sunset</h3>
+      <sq-theme sq-preset="sunset">
+        <sq-card padded>
+          <sq-heading size="sm">Sunset</sq-heading>
+          <p>Orange to pink gradient, soft corners, deep shadows.</p>
+          <sq-button variant="primary">Golden Hour</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Ocean</h3>
+      <sq-theme sq-preset="ocean">
+        <sq-card padded>
+          <sq-heading size="sm">Ocean</sq-heading>
+          <p>Blue to teal gradient, soft corners, deep shadows.</p>
+          <sq-button variant="primary">Deep Sea</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+  </div>
+`;
+
+// ============================================================================
+// PRESETS DARK MODE
+// ============================================================================
+
+export const PresetsDarkMode = () => html`
+  <h2>Presets — Dark Mode</h2>
+  <p>All presets support <code>sq-mode="dark"</code> for a moody, dark variant.</p>
+
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Vaporwave Dark</h3>
+      <sq-theme sq-preset="vaporwave" sq-mode="dark">
+        <sq-card padded>
+          <sq-heading size="sm">Vaporwave Dark</sq-heading>
+          <p>Deep purple gradients with neon accents.</p>
+          <sq-button variant="primary">Midnight Synth</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Sunset Dark</h3>
+      <sq-theme sq-preset="sunset" sq-mode="dark">
+        <sq-card padded>
+          <sq-heading size="sm">Sunset Dark</sq-heading>
+          <p>Warm amber tones on a dark canvas.</p>
+          <sq-button variant="primary">Twilight</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Ocean Dark</h3>
+      <sq-theme sq-preset="ocean" sq-mode="dark">
+        <sq-card padded>
+          <sq-heading size="sm">Ocean Dark</sq-heading>
+          <p>Deep sea blues with teal highlights.</p>
+          <sq-button variant="primary">Abyss</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+  </div>
+`;
+
+// ============================================================================
+// NESTED THEMES — Light and Dark Mixing
+// ============================================================================
+
+export const NestedThemes = () => html`
+  <h2>Nested Themes</h2>
+  <p>Nest <code>&lt;sq-theme&gt;</code> elements to create mixed light/dark regions and combine modifiers at different levels.</p>
+
+  <sq-theme sq-preset="vaporwave">
+    <sq-card padded style="margin-bottom: 1.5rem;">
+      <sq-heading size="sm">Vaporwave Outer Layer</sq-heading>
+      <p>This card lives in the vaporwave preset. Everything inside inherits the gradient background and square corners.</p>
+
+      <sq-flex gap="lg" style="margin-top: 1rem;">
+        <sq-button variant="primary">Vaporwave Button</sq-button>
+        <sq-button variant="secondary">Secondary</sq-button>
+      </sq-flex>
+
+      <!-- Nested dark mode inside vaporwave -->
+      <sq-theme sq-mode="dark" style="margin-top: 1.5rem;">
+        <sq-card padded>
+          <sq-heading size="sm">Nested Dark Mode</sq-heading>
+          <p>This inner card switches to dark mode while keeping the vaporwave color palette.</p>
+          <sq-button variant="primary">Dark Button</sq-button>
+        </sq-card>
+      </sq-theme>
+
+      <!-- Nested theme override inside vaporwave -->
+      <sq-theme sq-theme="cyan" sq-shape="soft" style="margin-top: 1.5rem;">
+        <sq-card padded>
+          <sq-heading size="sm">Nested Cyan + Soft Shape</sq-heading>
+          <p>This inner card overrides the preset with cyan colors and soft corners.</p>
+          <sq-button variant="primary">Cyan Button</sq-button>
+        </sq-card>
+      </sq-theme>
+    </sq-card>
+  </sq-theme>
+`;
+
+// ============================================================================
+// COMPLEX NESTING — Multi-Level Theme Hierarchy
+// ============================================================================
+
+export const ComplexNesting = () => html`
+  <h2>Complex Nesting — Multi-Level Hierarchy</h2>
+  <p>Demonstrates three levels of nesting with mixed light/dark modes and modifier overrides.</p>
+
+  <sq-theme sq-theme="red" sq-shadow="deep">
+    <sq-card padded style="margin-bottom: 1.5rem;">
+      <sq-heading size="sm">Level 1: Red + Deep Shadow</sq-heading>
+      <p>Outer layer uses red theme with deep shadows.</p>
+      <sq-button variant="primary">Red Action</sq-button>
+
+      <sq-theme sq-mode="dark" style="margin-top: 1rem;">
+        <sq-card padded>
+          <sq-heading size="sm">Level 2: Red Dark Mode</sq-heading>
+          <p>Switches to dark mode, keeping red palette and deep shadows.</p>
+
+          <sq-theme sq-shape="square" sq-shadow="flat" style="margin-top: 1rem;">
+            <sq-card padded>
+              <sq-heading size="sm">Level 3: Square + Flat</sq-heading>
+              <p>Overrides shape to square and shadow to flat, still in dark red.</p>
+              <sq-button variant="primary">Deeply Nested</sq-button>
+            </sq-card>
+          </sq-theme>
+        </sq-card>
+      </sq-theme>
+    </sq-card>
+  </sq-theme>
+`;
+
+// ============================================================================
+// PRESET WITH MODIFIER OVERRIDES
+// ============================================================================
+
+export const PresetWithModifierOverrides = () => html`
+  <h2>Preset + Modifier Overrides</h2>
+  <p>Apply a preset, then override individual modifiers for fine-tuned control.</p>
+
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Vaporwave + Soft Corners</h3>
+      <sq-theme sq-preset="vaporwave" sq-shape="soft">
+        <sq-card padded>
+          <sq-heading size="sm">Soft Vaporwave</sq-heading>
+          <p>Vaporwave gradient with soft corners instead of square.</p>
+          <sq-button variant="primary">Retro Soft</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Ocean + Square + Flat</h3>
+      <sq-theme sq-preset="ocean" sq-shape="square" sq-shadow="flat">
+        <sq-card padded>
+          <sq-heading size="sm">Flat Ocean</sq-heading>
+          <p>Ocean gradient with square corners and no shadows.</p>
+          <sq-button variant="primary">Minimal Sea</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+
+    <div style="flex: 1; min-width: 280px;">
+      <h3>Sunset + Dark + Deep</h3>
+      <sq-theme sq-preset="sunset" sq-mode="dark" sq-shadow="deep">
+        <sq-card padded>
+          <sq-heading size="sm">Dark Sunset</sq-heading>
+          <p>Sunset preset in dark mode with extra-deep shadows.</p>
+          <sq-button variant="primary">Night Glow</sq-button>
+        </sq-card>
+      </sq-theme>
+    </div>
+  </div>
+`;
+
+// ============================================================================
+// FULL SHOWCASE — All Modifiers and Presets
+// ============================================================================
+
+export const ModifiersShowcase = () => html`
+  <h2>Full Modifier &amp; Preset Showcase</h2>
+  <p>A complete demonstration of all shape, shadow, and preset combinations with nested light/dark elements.</p>
+
+  <sq-theme sq-preset="vaporwave">
+    <sq-card padded style="margin-bottom: 2rem;">
+      <sq-heading>Vaporwave Dashboard</sq-heading>
+      <p>A full UI built inside the vaporwave preset with nested dark mode panels.</p>
+
+      <sq-grid cols="2" style="margin-top: 1rem;">
+        <sq-card padded>
+          <sq-heading size="sm">Statistics</sq-heading>
+          <sq-meter value="0.75" label="CPU Usage"></sq-meter>
+          <sq-meter value="0.6" label="Memory"></sq-meter>
+        </sq-card>
+
+        <sq-theme sq-mode="dark">
+          <sq-card padded>
+            <sq-heading size="sm">Dark Panel</sq-heading>
+            <p>Nested dark mode panel inside vaporwave.</p>
+            <sq-button variant="primary" size="sm">Configure</sq-button>
+          </sq-card>
+        </sq-theme>
+      </sq-grid>
+
+      <sq-divider style="margin: 1.5rem 0;"></sq-divider>
+
+      <sq-flex gap="md">
+        <sq-button variant="primary">Deploy</sq-button>
+        <sq-button variant="secondary">Review</sq-button>
+        <sq-button variant="tertiary">Cancel</sq-button>
+      </sq-flex>
+    </sq-card>
+  </sq-theme>
+
+  <sq-theme sq-theme="cyan" sq-shape="square" sq-shadow="deep">
+    <sq-card padded style="margin-bottom: 2rem;">
+      <sq-heading>Cyan Square Dashboard</sq-heading>
+      <p>Cyan theme with square corners and deep shadows — a clean, modern look.</p>
+
+      <sq-grid cols="3" style="margin-top: 1rem;">
+        <sq-card padded>
+          <sq-heading size="sm">Card One</sq-heading>
+          <p>First item in the grid.</p>
+        </sq-card>
+        <sq-card padded>
+          <sq-heading size="sm">Card Two</sq-heading>
+          <p>Second item in the grid.</p>
+        </sq-card>
+        <sq-card padded>
+          <sq-heading size="sm">Card Three</sq-heading>
+          <p>Third item in the grid.</p>
+        </sq-card>
+      </sq-grid>
+    </sq-card>
+  </sq-theme>
+
+  <sq-theme sq-preset="ocean" sq-mode="dark">
+    <sq-card padded>
+      <sq-heading>Ocean Dark Dashboard</sq-heading>
+      <p>Ocean preset in dark mode — deep sea blues with teal highlights.</p>
+
+      <sq-flex gap="md" style="margin-top: 1rem;">
+        <sq-badge variant="info">Active</sq-badge>
+        <sq-badge variant="success">Online</sq-badge>
+        <sq-badge variant="warning">Pending</sq-badge>
+      </sq-flex>
+
+      <sq-theme sq-shape="soft" style="margin-top: 1rem;">
+        <sq-card padded>
+          <sq-heading size="sm">Soft Override</sq-heading>
+          <p>This nested card overrides the preset's soft corners explicitly.</p>
+        </sq-card>
+      </sq-theme>
+    </sq-card>
+  </sq-theme>
+`;
