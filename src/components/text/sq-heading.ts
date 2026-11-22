@@ -16,7 +16,7 @@ export class SqHeading extends LitElement {
 
     .heading {
       font-family: var(--sq-font-family);
-      font-weight: var(--sq-font-weight-bold);
+      font-weight: var(--sq-font-weight-semibold);
       line-height: var(--sq-line-height-tight);
       color: var(--sq-fg-default);
       margin: 0;

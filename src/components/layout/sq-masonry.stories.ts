@@ -35,7 +35,7 @@ export const Default: Story = {
       ${masonryItem('#22c55e', 'Taller', '140px')}
       ${masonryItem('#f59e0b', 'Medium', '110px')}
       ${masonryItem('#ef4444', 'Tallest', '180px')}
-      ${masonryItem('#8b5cf6', 'Short', '90px')}
+      ${masonryItem('#D946EF', 'Short', '90px')}
       ${masonryItem('#ec4899', 'Medium', '120px')}
       ${masonryItem('#06b6d4', 'Tall', '160px')}
       ${masonryItem('#84cc16', 'Short', '100px')}
@@ -51,7 +51,7 @@ export const TwoColumns: Story = {
       ${masonryItem('#22c55e', 'Item 2', '180px')}
       ${masonryItem('#f59e0b', 'Item 3', '90px')}
       ${masonryItem('#ef4444', 'Item 4', '150px')}
-      ${masonryItem('#8b5cf6', 'Item 5', '110px')}
+      ${masonryItem('#D946EF', 'Item 5', '110px')}
       ${masonryItem('#ec4899', 'Item 6', '140px')}
     </sq-masonry>
   `,
@@ -64,7 +64,7 @@ export const FourColumns: Story = {
       ${masonryItem('#22c55e', '2', '120px')}
       ${masonryItem('#f59e0b', '3', '100px')}
       ${masonryItem('#ef4444', '4', '140px')}
-      ${masonryItem('#8b5cf6', '5', '90px')}
+      ${masonryItem('#D946EF', '5', '90px')}
       ${masonryItem('#ec4899', '6', '160px')}
       ${masonryItem('#06b6d4', '7', '110px')}
       ${masonryItem('#84cc16', '8', '130px')}
@@ -79,7 +79,7 @@ export const CustomGap: Story = {
       ${masonryItem('#22c55e', '2', '160px')}
       ${masonryItem('#f59e0b', '3', '120px')}
       ${masonryItem('#ef4444', '4', '140px')}
-      ${masonryItem('#8b5cf6', '5', '90px')}
+      ${masonryItem('#D946EF', '5', '90px')}
       ${masonryItem('#ec4899', '6', '180px')}
     </sq-masonry>
   `,
@@ -88,15 +88,15 @@ export const CustomGap: Story = {
 export const PhotoGallery: Story = {
   render: () => html`
     <sq-masonry columns="3" gap="var(--sq-space-3)">
-      ${masonryItem('#3b82f6', '📷 Photo 1', '150px')}
-      ${masonryItem('#22c55e', '📷 Photo 2', '200px')}
-      ${masonryItem('#f59e0b', '📷 Photo 3', '120px')}
-      ${masonryItem('#ef4444', '📷 Photo 4', '180px')}
-      ${masonryItem('#8b5cf6', '📷 Photo 5', '140px')}
-      ${masonryItem('#ec4899', '📷 Photo 6', '160px')}
-      ${masonryItem('#06b6d4', '📷 Photo 7', '130px')}
-      ${masonryItem('#84cc16', '📷 Photo 8', '170px')}
-      ${masonryItem('#f97316', '📷 Photo 9', '110px')}
+      ${masonryItem('#3b82f6', 'Photo 1', '150px')}
+      ${masonryItem('#22c55e', 'Photo 2', '200px')}
+      ${masonryItem('#f59e0b', 'Photo 3', '120px')}
+      ${masonryItem('#ef4444', 'Photo 4', '180px')}
+      ${masonryItem('#D946EF', 'Photo 5', '140px')}
+      ${masonryItem('#ec4899', 'Photo 6', '160px')}
+      ${masonryItem('#06b6d4', 'Photo 7', '130px')}
+      ${masonryItem('#84cc16', 'Photo 8', '170px')}
+      ${masonryItem('#f97316', 'Photo 9', '110px')}
     </sq-masonry>
   `,
 };
@@ -111,7 +111,7 @@ export const AllVariants: Story = {
           ${masonryItem('#22c55e', '2', '160px')}
           ${masonryItem('#f59e0b', '3', '120px')}
           ${masonryItem('#ef4444', '4', '140px')}
-          ${masonryItem('#8b5cf6', '5', '90px')}
+          ${masonryItem('#D946EF', '5', '90px')}
           ${masonryItem('#ec4899', '6', '180px')}
         </sq-masonry>
       </div>
@@ -121,7 +121,7 @@ export const AllVariants: Story = {
           ${masonryItem('#06b6d4', '1', '130px')}
           ${masonryItem('#84cc16', '2', '170px')}
           ${masonryItem('#f97316', '3', '110px')}
-          ${masonryItem('#6366f1', '4', '150px')}
+          ${masonryItem('#D946EF', '4', '150px')}
         </sq-masonry>
       </div>
       <div>

@@ -132,7 +132,7 @@ export const CyanTheme = () => html`
       <h3 style="margin-bottom: 0.5rem;">Cyan theme (light)</h3>
       <sq-theme sq-theme="cyan">
         <sq-card padded>
-          <p>Based on Neon Cyan #00FFDB</p>
+          <p>Based on Cyan #00B4D8 — darkened for WCAG AA 4.5:1 contrast</p>
           <sq-flex gap="2" wrap>
             <sq-button variant="primary">Primary</sq-button>
             <sq-button variant="secondary">Secondary</sq-button>
@@ -145,7 +145,7 @@ export const CyanTheme = () => html`
       <h3 style="margin-bottom: 0.5rem;">Cyan theme (dark)</h3>
       <sq-theme sq-theme="cyan" sq-mode="dark">
         <sq-card padded>
-          <p>Based on Neon Cyan #00FFDB</p>
+          <p>Based on Cyan #00B4D8 — darkened for WCAG AA 4.5:1 contrast</p>
           <sq-flex gap="2" wrap>
             <sq-button variant="primary">Primary</sq-button>
             <sq-button variant="secondary">Secondary</sq-button>
