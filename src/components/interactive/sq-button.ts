@@ -84,10 +84,13 @@ export class SqButton extends LitElement {
     }
 
     button:disabled {
-      opacity: 0.4;
+      opacity: 0.6;
       cursor: not-allowed;
       transform: none;
       box-shadow: none;
+      text-decoration: line-through;
+      text-decoration-color: var(--sq-fg-muted);
+      text-decoration-thickness: 2px;
     }
 
     /* ---- Primary (default) — filled accent ---- */
@@ -184,7 +187,8 @@ export class SqButton extends LitElement {
 
     /* ---- Sizes ---- */
     button[size="sm"] {
-      height: 32px;
+      height: 36px;
+      min-width: 36px;
       padding: 0 var(--sq-space-3);
       font-size: var(--sq-text-xs);
       gap: var(--sq-space-1);
@@ -231,6 +235,33 @@ export class SqButton extends LitElement {
   @property({ type: Boolean }) disabled = false;
   @property({ type: Boolean }) loading = false;
   @property({ type: String }) type: 'button' | 'submit' | 'reset' = 'button';
+  @property({ type: Number }) loadingTimeout = 60000; // 60 seconds default
+
+  #timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+  override updated(changed: Map<string, unknown>) {
+    super.updated(changed);
+
+    // Manage loading timeout
+    if (this.loading && !this.disabled && this.loadingTimeout > 0) {
+      this.#timeoutId = setTimeout(() => {
+        this.dispatchEvent(new CustomEvent('loading-timeout', { bubbles: true }));
+        this.loading = false;
+        this.disabled = true;
+      }, this.loadingTimeout);
+    } else if (this.#timeoutId) {
+      clearTimeout(this.#timeoutId);
+      this.#timeoutId = null;
+    }
+  }
+
+  override disconnectedCallback() {
+    super.disconnectedCallback();
+    if (this.#timeoutId) {
+      clearTimeout(this.#timeoutId);
+      this.#timeoutId = null;
+    }
+  }
 
   @state() hasIcon = false;
 
@@ -248,12 +279,14 @@ export class SqButton extends LitElement {
   }
 
   override render() {
+    const isDisabled = this.disabled || this.loading;
     return html`
       <button
         type=${this.type}
         variant=${this.variant}
         size=${this.size}
-        ?disabled=${this.disabled || this.loading}
+        ?disabled=${isDisabled}
+        title=${isDisabled ? 'This button is currently disabled' : ''}
       >
         ${this.hasIcon ? html`<slot name="icon" class="icon-slot"></slot>` : ''}
         ${this.loading ? html`<span class="spinner" aria-hidden="true"></span>` : ''}
