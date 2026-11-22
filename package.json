@@ -2,6 +2,7 @@
   "name": "squiddyds",
   "version": "1.0.0",
   "description": "Squiddy Design System — Web Components for modern web applications",
+  "license": "MIT",
   "main": "dist/squiddy-ds.js",
   "module": "dist/squiddy-ds.js",
   "types": "dist/index.d.ts",
